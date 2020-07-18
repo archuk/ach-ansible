@@ -3,13 +3,8 @@
     hosts: ios
     connection: network_cli
     no_log: false
-    gather_facts: true
-    vars_prompt:
-      - name: username
-        prompt: "Username"
-        private: no
-      - name: password
-        prompt: "Password"
+    gather_facts: false
+
     tasks:
       - name: DEPLOY_SNMP_COMMANDS_WITHIN_PLAYBOOK
         ios_config:
@@ -19,5 +14,13 @@
             - snmp-server community provate123 RW
             - snmp-server location TEST_ENV
             - snmp-server contact ACH
-          username: '{{ username }}'
-          password: '{{ password }}'
+
+  ##  vars_prompt:
+  ##    - name: username
+  ##      prompt: "Username"
+  ##      private: no
+  ##    - name: password
+  ##     prompt: "Password"
+        
+   ##       username: '{{ username }}'
+   ##       password: '{{ password }}'
