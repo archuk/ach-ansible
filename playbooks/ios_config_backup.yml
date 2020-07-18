@@ -1,8 +1,9 @@
 
 ---
 - hosts: ios
-  gather_facts: no
-
+  connection: network_cli
+  no_log: true
+  gather_facts: False
 
   tasks:
   - name: BACK UP CONFIG 
