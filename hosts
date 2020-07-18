@@ -1,4 +1,4 @@
 [ios]
 
-192.168.139.100
+CSR1 ansible_host=192.168.139.100 ansible_network_os=ios
 
