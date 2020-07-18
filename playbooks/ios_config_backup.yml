@@ -1,15 +1,13 @@
 
 ---
 - hosts: ios
-  connection: local
+  connection: network_cli
   no_log: false
   gather_facts: False
-  username: cisco
-  password: cisco
   
   tasks:
   - name: BACK UP CONFIG 
     ios_config:
       backup: yes
-      username: '{{ username }}'
-      password: '{{ password }}'
+
+
