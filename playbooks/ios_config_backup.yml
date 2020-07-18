@@ -2,7 +2,7 @@
 ---
 - hosts: ios
   connection: network_cli
-  no_log: true
+  no_log: false
   gather_facts: False
 
   tasks:
