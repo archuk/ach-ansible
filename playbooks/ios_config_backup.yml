@@ -1,7 +1,7 @@
 
 ---
 - hosts: ios
-  connection: network_cli
+  connection: local
   no_log: false
   gather_facts: False
 
